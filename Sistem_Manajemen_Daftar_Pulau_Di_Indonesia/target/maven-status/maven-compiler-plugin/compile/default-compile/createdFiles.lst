@@ -1,0 +1,6 @@
+model\DeskripsiPulau.class
+model\PulauBesar.class
+service\PulauService.class
+model\Pulau.class
+main\MainApp.class
+model\PulauKecil.class
