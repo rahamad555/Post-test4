@@ -91,6 +91,9 @@ Polymorphism diimplementasikan dalam dua bentuk, yaitu Overriding dan Overloadin
 * Overloading terjadi pada bagian PulauService, khususnya pada method tambahPulau(). Method ini dibuat dalam beberapa versi (dengan parameter berbeda), misalnya ada yang menerima hanya nama dan lokasi (untuk Pulau Biasa), ada yang menerima nama, lokasi, dan luas (untuk Pulau Besar), serta ada yang menerima nama, lokasi, dan status berpenghuni (untuk Pulau Kecil). Dengan cara ini, nama method tetap sama tetapi bisa dipanggil sesuai kebutuhan jenis pulau yang ingin ditambahkan.
 
 
+# Contoh Output
+
+
   <img width="704" height="340" alt="image" src="https://github.com/user-attachments/assets/391efcdd-7e67-4c02-909e-8e451c08ca42" />
 
 
