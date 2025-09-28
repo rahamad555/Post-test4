@@ -79,6 +79,65 @@ Penjelasan:User di arahkan untuk mengisi ID(no pulau) yang ingin di hapus.
 Penjelasan:Program berhenti berjalan karena pengguna sudah memilih keluar.
 
 
+# Penjelasan Abstraction
+Dalam program ini, abstraction diterapkan melalui interface DeskripsiPulau yang ada di package model. Interface ini mendefinisikan method abstrak tampilkanDeskripsi() yang wajib diimplementasikan oleh setiap subclass dari Pulau. Dengan adanya abstraction, kita bisa memastikan semua jenis pulau (Pulau Biasa, Pulau Besar, Pulau Kecil) memiliki cara sendiri untuk menampilkan deskripsinya, meskipun detail implementasinya berbeda-beda. Abstraction ini membuat kode lebih terstruktur, karena kelas turunan hanya perlu fokus pada bagaimana deskripsi masing-masing pulau ditampilkan sesuai karakteristiknya.
+
+# Penjelasan Polymorphism
+
+Polymorphism diimplementasikan dalam dua bentuk, yaitu Overriding dan Overloading.
+
+* Overriding terjadi ketika subclass (PulauBesar, PulauKecil) meng-override method tampilkanDeskripsi() dari interface DeskripsiPulau. Hasilnya, meskipun semua pulau dipanggil dengan method yang sama (tampilkanDeskripsi()), output yang muncul akan berbeda. Contohnya, Pulau Besar menampilkan atribut tambahan berupa luas wilayah, sedangkan Pulau Kecil menampilkan atribut status berpenghuni.
+
+* Overloading terjadi pada bagian PulauService, khususnya pada method tambahPulau(). Method ini dibuat dalam beberapa versi (dengan parameter berbeda), misalnya ada yang menerima hanya nama dan lokasi (untuk Pulau Biasa), ada yang menerima nama, lokasi, dan luas (untuk Pulau Besar), serta ada yang menerima nama, lokasi, dan status berpenghuni (untuk Pulau Kecil). Dengan cara ini, nama method tetap sama tetapi bisa dipanggil sesuai kebutuhan jenis pulau yang ingin ditambahkan.
+
+
+  <img width="704" height="340" alt="image" src="https://github.com/user-attachments/assets/391efcdd-7e67-4c02-909e-8e451c08ca42" />
+
+
+Pada output tersebut, program pertama menampilkan menu utama dan pengguna memilih opsi tambah pulau. Setelah itu, sistem menampilkan daftar jenis pulau yang dapat dipilih, yaitu Pulau Biasa, Pulau Besar, dan Pulau Kecil. Pengguna memilih Pulau Biasa, lalu program meminta masukan berupa nama dan lokasi pulau. Dalam contoh ini, pengguna memasukkan nama Belitung dengan lokasi Kepulauan Bangka Belitung. Setelah data berhasil disimpan, program secara otomatis menampilkan deskripsi khusus dari Pulau Biasa.
+
+Penerapan konsep abstraction terlihat dari penggunaan interface DeskripsiPulau yang mendefinisikan method tampilkanDeskripsi(). Sementara itu, konsep polymorphism (overriding) ditunjukkan ketika class Pulau Biasa mengimplementasikan method tampilkanDeskripsi() dengan isi berbeda, yakni menjelaskan bahwa pulau biasa berukuran sedang dan umumnya dihuni oleh masyarakat lokal. Dengan cara ini, meskipun semua jenis pulau menggunakan method yang sama, hasil deskripsi yang ditampilkan berbeda sesuai dengan karakteristik masing-masing jenis pulau.
+
+
+
+<img width="691" height="369" alt="image" src="https://github.com/user-attachments/assets/94a28c7c-4026-49dd-8d85-86abd1e09e7f" />
+
+
+Pada output ini, program menampilkan menu utama dan pengguna memilih opsi Tambah Pulau. Setelah itu muncul daftar jenis pulau, lalu pengguna memilih Pulau Besar. Program kemudian meminta masukan berupa nama pulau, lokasi pulau, serta luas pulau dalam satuan km². Pada contoh ini, pengguna memasukkan nama Kalimantan Timur, lokasi Indonesia Tengah, dan luas 139462 km². Setelah data berhasil dimasukkan ke dalam daftar, program menampilkan deskripsi khusus untuk Pulau Besar.
+
+Konsep abstraction diterapkan melalui penggunaan interface DeskripsiPulau yang memastikan semua jenis pulau wajib memiliki method tampilkanDeskripsi(). Sementara itu, konsep polymorphism (overriding) muncul karena class PulauBesar mengimplementasikan method tampilkanDeskripsi() dengan isi yang berbeda dari Pulau Biasa maupun Pulau Kecil. Pada Pulau Besar, deskripsi lebih menekankan bahwa pulau dengan ukuran luas ini biasanya menjadi pusat aktivitas ekonomi, pemerintahan, dan budaya. Dengan demikian, meskipun semua jenis pulau menggunakan method yang sama, hasil output yang diberikan dapat berbeda sesuai karakteristiknya.
+
+
+
+
+<img width="853" height="379" alt="image" src="https://github.com/user-attachments/assets/210bb129-120a-4c43-a540-c3a8cbcf8bf7" />
+
+
+Pada output ini, setelah pengguna memilih menu Tambah Pulau, program menampilkan pilihan jenis pulau. Pengguna memilih Pulau Kecil, sehingga sistem meminta input berupa nama pulau, lokasi, serta status berpenghuni atau tidak. Pada contoh ini, pengguna mengisi nama Derawan, lokasi Berau, dan status berpenghuni: true. Data tersebut berhasil ditambahkan ke dalam daftar dan program menampilkan deskripsi khusus untuk Pulau Kecil.
+
+Konsep abstraction diterapkan melalui interface DeskripsiPulau, yang mewajibkan setiap jenis pulau untuk menampilkan deskripsi dengan cara masing-masing. Sedangkan konsep polymorphism (overriding) terlihat karena method tampilkanDeskripsi() di class PulauKecil memberikan detail berbeda dibandingkan Pulau Biasa atau Pulau Besar. Pada Pulau Kecil, deskripsi menekankan bahwa pulau ini biasanya digunakan untuk pariwisata, tempat tinggal nelayan, atau kawasan konservasi, serta menambahkan atribut tambahan status berpenghuni untuk membedakan karakteristiknya. Dengan demikian, meskipun method yang dipanggil sama, hasil deskripsinya lebih sesuai dengan sifat khas Pulau Kecil.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
